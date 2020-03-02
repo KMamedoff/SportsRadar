@@ -17,16 +17,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vxb-g1-ecL">
-                        <rect key="frame" x="11" y="13" width="500" height="160"/>
+                        <rect key="frame" x="8" y="8" width="506" height="253"/>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="vxb-g1-ecL" secondAttribute="height" multiplier="2:1" id="TJs-eb-6vw"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="vxb-g1-ecL" secondAttribute="bottom" priority="250" constant="120" id="H6k-Fw-yVJ"/>
-                    <constraint firstItem="vxb-g1-ecL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="HyI-pK-st1"/>
-                    <constraint firstItem="vxb-g1-ecL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="11" id="n57-1a-1dE"/>
-                    <constraint firstAttribute="trailing" secondItem="vxb-g1-ecL" secondAttribute="trailing" constant="11" id="wYF-4C-aal"/>
+                    <constraint firstAttribute="bottom" secondItem="vxb-g1-ecL" secondAttribute="bottom" priority="250" constant="8" id="H6k-Fw-yVJ"/>
+                    <constraint firstItem="vxb-g1-ecL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="HyI-pK-st1"/>
+                    <constraint firstItem="vxb-g1-ecL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="n57-1a-1dE"/>
+                    <constraint firstAttribute="trailing" secondItem="vxb-g1-ecL" secondAttribute="trailing" constant="8" id="wYF-4C-aal"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

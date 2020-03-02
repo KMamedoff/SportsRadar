@@ -28,7 +28,7 @@ class MainTableViewController: UITableViewController {
         super.viewDidLoad()
                     
         setupTableView()
-        setupNavigationController()
+        setupNavigationBarController()
     }
     
     private func setupTableView() {
@@ -39,22 +39,23 @@ class MainTableViewController: UITableViewController {
         tableView.separatorStyle = .none
         tableView.contentInsetAdjustmentBehavior = .always
         tableView.allowsSelection = false
+        tableView.delaysContentTouches = false
         tableView.dataSource = self
         tableView.delegate = self
     }
     
-    private func setupNavigationController() {
+    private func setupNavigationBarController() {
         title = SportsTypes.allCases[tabBarController?.selectedIndex ?? 0].rawValue.capitalized
     }
     
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
     }
     
     private func getFieldTableViewCell(for indexPath: IndexPath) -> FieldTableViewCell {
@@ -80,7 +81,14 @@ class MainTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = getFieldTableViewCell(for: indexPath)
-        return cell
+        switch indexPath.section {
+        case 0:
+            return getFieldTableViewCell(for: indexPath)
+        case 1:
+            return getInputTableViewCell(for: indexPath)
+        default:
+            return UITableViewCell()
+        }
+        
     }
 }

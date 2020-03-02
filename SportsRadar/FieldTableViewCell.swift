@@ -15,7 +15,7 @@ class FieldTableViewCell: UITableViewCell, MatchPitchProtocol {
     }
     
     func setContent(forSport sport: SportsTypes) {
-        print(sport)
+        
     }
     
     func setResult(for home: NSNumber, and away: NSNumber) {
