@@ -27,11 +27,14 @@
                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
                     </textField>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwy-40-62J" customClass="RoundedBlueButton" customModule="SportsRadar" customModuleProvider="target">
-                        <rect key="frame" x="143" y="108" width="170" height="34"/>
+                        <rect key="frame" x="160" y="108" width="136" height="34"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="cwy-40-62J" secondAttribute="height" multiplier="5:1" id="Xzu-1e-yLH"/>
+                            <constraint firstAttribute="width" secondItem="cwy-40-62J" secondAttribute="height" multiplier="4:1" id="Xzu-1e-yLH"/>
                         </constraints>
                         <state key="normal" title="Set Score"/>
+                        <connections>
+                            <action selector="setScoreAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="s8i-Ny-Lcs"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -48,6 +51,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="awayScoreTextField" destination="Zbh-Wi-Pda" id="Q4o-3U-T28"/>
+                <outlet property="homeScoreTextField" destination="uNK-gv-LUi" id="KUk-nj-5h0"/>
+            </connections>
             <point key="canvasLocation" x="39.130434782608695" y="215.95982142857142"/>
         </tableViewCell>
     </objects>

@@ -8,17 +8,15 @@
 
 import UIKit
 
-class FieldTableViewCell: UITableViewCell, MatchPitchProtocol {
+class FieldTableViewCell: UITableViewCell {
+    @IBOutlet weak var fieldContainerView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
     func setContent(forSport sport: SportsTypes) {
-        
-    }
-    
-    func setResult(for home: NSNumber, and away: NSNumber) {
         
     }
 }
