@@ -12,6 +12,12 @@
 		7B2237C5240D892D00D1B4D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B2237C3240D892D00D1B4D6 /* Main.storyboard */; };
 		7B2237C7240D892F00D1B4D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B2237C6240D892F00D1B4D6 /* Assets.xcassets */; };
 		7B2237CA240D892F00D1B4D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B2237C8240D892F00D1B4D6 /* LaunchScreen.storyboard */; };
+		7B2237D2240D93E100D1B4D6 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2237D1240D93E100D1B4D6 /* MainTableViewController.swift */; };
+		7B2237D5240D940200D1B4D6 /* FieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2237D3240D940200D1B4D6 /* FieldTableViewCell.swift */; };
+		7B2237D6240D940200D1B4D6 /* FieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B2237D4240D940200D1B4D6 /* FieldTableViewCell.xib */; };
+		7B2237D9240D941400D1B4D6 /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2237D7240D941400D1B4D6 /* InputTableViewCell.swift */; };
+		7B2237DA240D941400D1B4D6 /* InputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B2237D8240D941400D1B4D6 /* InputTableViewCell.xib */; };
+		7B2237DD240D950D00D1B4D6 /* CellRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2237DC240D950D00D1B4D6 /* CellRegister.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		7B2237C6240D892F00D1B4D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B2237C9240D892F00D1B4D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B2237CB240D892F00D1B4D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B2237D1240D93E100D1B4D6 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		7B2237D3240D940200D1B4D6 /* FieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldTableViewCell.swift; sourceTree = "<group>"; };
+		7B2237D4240D940200D1B4D6 /* FieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FieldTableViewCell.xib; sourceTree = "<group>"; };
+		7B2237D7240D941400D1B4D6 /* InputTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
+		7B2237D8240D941400D1B4D6 /* InputTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InputTableViewCell.xib; sourceTree = "<group>"; };
+		7B2237DC240D950D00D1B4D6 /* CellRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellRegister.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,28 @@
 		7B2237BC240D892D00D1B4D6 /* SportsRadar */ = {
 			isa = PBXGroup;
 			children = (
+				7B2237DB240D94B100D1B4D6 /* Extensions */,
 				7B2237BD240D892D00D1B4D6 /* AppDelegate.swift */,
 				7B2237BF240D892D00D1B4D6 /* SceneDelegate.swift */,
 				7B2237C3240D892D00D1B4D6 /* Main.storyboard */,
+				7B2237D1240D93E100D1B4D6 /* MainTableViewController.swift */,
+				7B2237D4240D940200D1B4D6 /* FieldTableViewCell.xib */,
+				7B2237D3240D940200D1B4D6 /* FieldTableViewCell.swift */,
+				7B2237D8240D941400D1B4D6 /* InputTableViewCell.xib */,
+				7B2237D7240D941400D1B4D6 /* InputTableViewCell.swift */,
 				7B2237C6240D892F00D1B4D6 /* Assets.xcassets */,
 				7B2237C8240D892F00D1B4D6 /* LaunchScreen.storyboard */,
 				7B2237CB240D892F00D1B4D6 /* Info.plist */,
 			);
 			path = SportsRadar;
+			sourceTree = "<group>";
+		};
+		7B2237DB240D94B100D1B4D6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7B2237DC240D950D00D1B4D6 /* CellRegister.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,8 +148,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B2237DA240D941400D1B4D6 /* InputTableViewCell.xib in Resources */,
 				7B2237CA240D892F00D1B4D6 /* LaunchScreen.storyboard in Resources */,
 				7B2237C7240D892F00D1B4D6 /* Assets.xcassets in Resources */,
+				7B2237D6240D940200D1B4D6 /* FieldTableViewCell.xib in Resources */,
 				7B2237C5240D892D00D1B4D6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B2237D9240D941400D1B4D6 /* InputTableViewCell.swift in Sources */,
 				7B2237BE240D892D00D1B4D6 /* AppDelegate.swift in Sources */,
+				7B2237DD240D950D00D1B4D6 /* CellRegister.swift in Sources */,
+				7B2237D2240D93E100D1B4D6 /* MainTableViewController.swift in Sources */,
+				7B2237D5240D940200D1B4D6 /* FieldTableViewCell.swift in Sources */,
 				7B2237C0240D892D00D1B4D6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
