@@ -28,4 +28,3 @@ extension UITableView {
         return dequeueReusableCell(withIdentifier: className) as? T
     }
 }
-
