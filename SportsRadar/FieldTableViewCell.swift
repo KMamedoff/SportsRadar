@@ -8,12 +8,48 @@
 
 import UIKit
 
-class FieldTableViewCell: UITableViewCell {
-    @IBOutlet weak var fieldContainerView: UIView!
+class FieldTableViewCell: UITableViewCell, UITextFieldDelegate, MatchPitchProtocol {
+    @IBOutlet weak var homeScoreTextField: UITextField!
+    @IBOutlet weak var awayScoreTextField: UITextField!
+    
+    let scoreLabel = LabelWithAnimatedText()
     
     override func awakeFromNib() {
         super.awakeFromNib()
+                
+        homeScoreTextField.delegate = self
+        awayScoreTextField.delegate = self
         
+        setupScoreLabelUI()
+    }
+    
+    private func setupScoreLabelUI() {
+        contentView.addSubview(scoreLabel)
+
+        scoreLabel.translatesAutoresizingMaskIntoConstraints = false
+        scoreLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        scoreLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+    }
+    
+    @IBAction func setScoreAction(_ sender: RoundedBlueButton) {
+        endEditing(true)
+        
+        guard let homeScore = homeScoreTextField.text else {
+            return
+        }
+        
+        guard let awayScore = awayScoreTextField.text else {
+            return
+        }
+        
+        let home = NumberFormatter().number(from: homeScore) ?? 0
+        let away = NumberFormatter().number(from: awayScore) ?? 0
+
+        setResult(for: home, and: away)
+    }
+    
+    func setResult(for home: NSNumber, and away: NSNumber) {
+        scoreLabel.text = home.stringValue + " : " + away.stringValue
     }
     
     func setContent(forSport sport: SportsTypes) {

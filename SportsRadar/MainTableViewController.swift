@@ -33,7 +33,6 @@ class MainTableViewController: UITableViewController {
     
     private func setupTableView() {
         tableView.register(cell: FieldTableViewCell.self)
-        tableView.register(cell: InputTableViewCell.self)
         tableView.estimatedRowHeight = 44.0
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
@@ -49,10 +48,6 @@ class MainTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -70,25 +65,7 @@ class MainTableViewController: UITableViewController {
         return cell
     }
     
-    private func getInputTableViewCell(for indexPath: IndexPath) -> InputTableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: MainTableViewCellReuseIdentifiers.inputTableViewCell.rawValue,
-            for: indexPath) as? InputTableViewCell else {
-                return InputTableViewCell()
-        }
-        
-        return cell
-    }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0:
-            return getFieldTableViewCell(for: indexPath)
-        case 1:
-            return getInputTableViewCell(for: indexPath)
-        default:
-            return UITableViewCell()
-        }
-        
+        return getFieldTableViewCell(for: indexPath)
     }
 }
