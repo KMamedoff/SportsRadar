@@ -6,11 +6,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="VcI-o5-gSu">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ltd-O8-4ZX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tabBarController id="Byb-Ah-gls" sceneMemberID="viewController">
+                <tabBarController id="Byb-Ah-gls" customClass="MainTabBarController" customModule="SportsRadar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h8B-af-ya0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -29,7 +29,7 @@
         <scene sceneID="hMI-kQ-gQQ">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qPX-Pb-6S6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController id="vvq-NH-Fae" sceneMemberID="viewController">
+                <navigationController id="vvq-NH-Fae" customClass="LargeTitlesNavigationViewController" customModule="SportsRadar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Basketball" image="Basketball Tab Icon" id="gHN-ka-NLq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8W3-Py-92w">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -46,7 +46,7 @@
         <scene sceneID="eZ4-GU-3au">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HmC-tB-cPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController id="ln6-jl-bhK" sceneMemberID="viewController">
+                <navigationController id="ln6-jl-bhK" customClass="LargeTitlesNavigationViewController" customModule="SportsRadar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Football" image="Football Tab Icon" id="JHu-iL-rfg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ubD-oC-o0I">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -63,7 +63,7 @@
         <scene sceneID="mjv-f3-KUR">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bnc-uo-oYi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <navigationController id="p02-it-nSK" sceneMemberID="viewController">
+                <navigationController id="p02-it-nSK" customClass="LargeTitlesNavigationViewController" customModule="SportsRadar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Tennis" image="Tennis Tab Icon" id="2bq-6K-gGm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OhG-2o-Ggv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

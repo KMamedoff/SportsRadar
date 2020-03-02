@@ -13,11 +13,22 @@ enum MainTableViewCellReuseIdentifiers: String {
     case inputTableViewCell = "InputTableViewCell"
 }
 
+enum SportsTypes: String, CaseIterable {
+    case football
+    case basketball
+    case tennis
+}
+
+protocol MatchPitchProtocol {
+    func setResult(for home: NSNumber, and away: NSNumber)
+}
+
 class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                    
         setupTableView()
+        setupNavigationController()
     }
     
     private func setupTableView() {
@@ -32,14 +43,18 @@ class MainTableViewController: UITableViewController {
         tableView.delegate = self
     }
     
+    private func setupNavigationController() {
+        title = SportsTypes.allCases[tabBarController?.selectedIndex ?? 0].rawValue.capitalized
+    }
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return 10
     }
     
     private func getFieldTableViewCell(for indexPath: IndexPath) -> FieldTableViewCell {
@@ -48,6 +63,8 @@ class MainTableViewController: UITableViewController {
             for: indexPath) as? FieldTableViewCell else {
                 return FieldTableViewCell()
         }
+        
+        cell.setContent(forSport: SportsTypes.allCases[tabBarController?.selectedIndex ?? 0])
         
         return cell
     }
