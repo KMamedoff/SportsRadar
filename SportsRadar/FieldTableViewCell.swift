@@ -26,7 +26,6 @@ class FieldTableViewCell: UITableViewCell, UITextFieldDelegate, MatchPitchProtoc
     
     private func setupScoreLabelUI() {
         contentView.addSubview(scoreLabel)
-        scoreLabel.textAlignment = .center
         
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
         scoreLabel.centerYAnchor.constraint(equalTo: fieldContainerView.centerYAnchor).isActive = true
@@ -52,7 +51,10 @@ class FieldTableViewCell: UITableViewCell, UITextFieldDelegate, MatchPitchProtoc
     }
     
     func setResult(for home: NSNumber, and away: NSNumber) {
-        scoreLabel.text = home.stringValue + " : " + away.stringValue
+        let new = home.stringValue + " : " + away.stringValue
+        let old = scoreLabel.text ?? ""
+        
+        scoreLabel.animateLabel(old: old, new: new)
     }
     
     func setContent(forSport sport: SportsTypes) {

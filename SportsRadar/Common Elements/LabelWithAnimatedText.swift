@@ -9,16 +9,6 @@
 import UIKit
 
 class LabelWithAnimatedText: UILabel {
-    override var text: String? {
-        willSet {
-            self.transform = .identity
-            self.transform = CGAffineTransform(translationX: -self.frame.width, y: 0)
-        }
-        didSet {
-            animateLabel()
-        }
-    }
-    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         
@@ -34,10 +24,15 @@ class LabelWithAnimatedText: UILabel {
     func commonInit(){
         self.backgroundColor = .clear
         self.textColor = UIColor.red
+        self.textAlignment = .center
         self.font = UIFont.boldSystemFont(ofSize: 50.0)
     }
     
-    private func animateLabel() {
+    func animateLabel(old: String, new: String) {
+        self.text = old
+        self.transform = .identity
+        self.transform = CGAffineTransform(translationX: -self.frame.width, y: 0)
+        
         UIView.animateKeyframes(withDuration: 4, delay: 0, options: .calculationModeCubic, animations: {
             
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25) {
@@ -45,23 +40,21 @@ class LabelWithAnimatedText: UILabel {
             }
             
             UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25) {
-                let animation = CATransition()
-                animation.timingFunction = CAMediaTimingFunction(name:
-                    CAMediaTimingFunctionName.easeIn)
-                animation.type = CATransitionType.fade
-                animation.duration = 0.4
-                self.layer.add(animation, forKey: CATransitionType.fade.rawValue)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
+                    let animation = CATransition()
+                    animation.timingFunction = CAMediaTimingFunction(name:
+                        CAMediaTimingFunctionName.easeInEaseOut)
+                    animation.type = CATransitionType.fade
+                    animation.duration = 0.4
+                    self.text = new
+                    
+                    self.layer.add(animation, forKey: CATransitionType.fade.rawValue)
+                }
             }
-            
+
             UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25) {
                 self.transform = CGAffineTransform(translationX: self.frame.width, y: 0)
             }
         })
-        
-        
-        
-        
-        
-        
     }
 }
