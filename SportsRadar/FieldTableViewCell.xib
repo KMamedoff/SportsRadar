@@ -64,6 +64,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="awayScoreTextField" destination="Zbh-Wi-Pda" id="Q4o-3U-T28"/>
+                <outlet property="fieldContainerView" destination="bFw-TA-HzT" id="z0f-Hm-x5h"/>
                 <outlet property="homeScoreTextField" destination="uNK-gv-LUi" id="KUk-nj-5h0"/>
             </connections>
             <point key="canvasLocation" x="39.130434782608695" y="148.66071428571428"/>

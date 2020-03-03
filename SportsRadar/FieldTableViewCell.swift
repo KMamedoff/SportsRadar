@@ -9,6 +9,7 @@
 import UIKit
 
 class FieldTableViewCell: UITableViewCell, UITextFieldDelegate, MatchPitchProtocol {
+    @IBOutlet weak var fieldContainerView: UIView!
     @IBOutlet weak var homeScoreTextField: UITextField!
     @IBOutlet weak var awayScoreTextField: UITextField!
     
@@ -25,10 +26,12 @@ class FieldTableViewCell: UITableViewCell, UITextFieldDelegate, MatchPitchProtoc
     
     private func setupScoreLabelUI() {
         contentView.addSubview(scoreLabel)
-
+        scoreLabel.textAlignment = .center
+        
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
-        scoreLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
-        scoreLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+        scoreLabel.centerYAnchor.constraint(equalTo: fieldContainerView.centerYAnchor).isActive = true
+        scoreLabel.centerXAnchor.constraint(equalTo: fieldContainerView.centerXAnchor).isActive = true
+        scoreLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
     }
     
     @IBAction func setScoreAction(_ sender: RoundedBlueButton) {

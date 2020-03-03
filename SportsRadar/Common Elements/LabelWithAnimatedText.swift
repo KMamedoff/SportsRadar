@@ -10,6 +10,10 @@ import UIKit
 
 class LabelWithAnimatedText: UILabel {
     override var text: String? {
+        willSet {
+            self.transform = .identity
+            self.transform = CGAffineTransform(translationX: -self.frame.width, y: 0)
+        }
         didSet {
             animateLabel()
         }
@@ -34,20 +38,26 @@ class LabelWithAnimatedText: UILabel {
     }
     
     private func animateLabel() {
-        
-        self.frame.origin.x = UIScreen.main.bounds.minX - self.frame.width
-        
-        UIView.animateKeyframes(withDuration: 2, delay: 0.1, options: [], animations: {
-            UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.33) {
-                self.frame.origin.x = UIScreen.main.bounds.midX
+        UIView.animateKeyframes(withDuration: 4, delay: 0, options: .calculationModeCubic, animations: {
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25) {
+                self.transform = CGAffineTransform(translationX: UIScreen.main.bounds.minX, y: 0)
             }
-            UIView.addKeyframe(withRelativeStartTime: 0.33, relativeDuration: 0.33) {
-                self.frame.origin.x = UIScreen.main.bounds.midX
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25) {
+                let animation = CATransition()
+                animation.timingFunction = CAMediaTimingFunction(name:
+                    CAMediaTimingFunctionName.easeIn)
+                animation.type = CATransitionType.fade
+                animation.duration = 0.4
+                self.layer.add(animation, forKey: CATransitionType.fade.rawValue)
             }
-            UIView.addKeyframe(withRelativeStartTime: 0.66, relativeDuration: 0.34) {
-                self.frame.origin.x = UIScreen.main.bounds.maxX
+            
+            UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25) {
+                self.transform = CGAffineTransform(translationX: self.frame.width, y: 0)
             }
         })
+        
         
         
         
