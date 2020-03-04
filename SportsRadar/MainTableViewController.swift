@@ -34,7 +34,6 @@ class MainTableViewController: UITableViewController {
     
     private func setupTableView() {
         tableView.register(cell: FieldTableViewCell.self)
-        tableView.estimatedRowHeight = 44.0
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
         tableView.contentInsetAdjustmentBehavior = .always

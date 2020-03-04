@@ -47,8 +47,10 @@ class FieldTableViewCell: UITableViewCell, UITextFieldDelegate, MatchPitchProtoc
             return
         }
         
-        let home = NumberFormatter().number(from: homeScore) ?? 0
-        let away = NumberFormatter().number(from: awayScore) ?? 0
+        let formatter = NumberFormatter()
+        
+        let home = formatter.number(from: homeScore) ?? 0
+        let away = formatter.number(from: awayScore) ?? 0
 
         setResult(for: home, and: away)
     }
