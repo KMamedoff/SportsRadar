@@ -13,11 +13,11 @@ class FieldTableViewCell: UITableViewCell, UITextFieldDelegate, MatchPitchProtoc
     @IBOutlet weak var homeScoreTextField: UITextField!
     @IBOutlet weak var awayScoreTextField: UITextField!
     
-    let scoreLabel = LabelWithAnimatedText()
+    private let scoreLabel = LabelWithAnimatedText()
     
     override func awakeFromNib() {
         super.awakeFromNib()
-                
+        
         homeScoreTextField.delegate = self
         awayScoreTextField.delegate = self
         

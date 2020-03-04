@@ -26,7 +26,8 @@ protocol MatchPitchProtocol {
 class MainTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-                    
+        
+        hideKeyboardOnInteraction()
         setupTableView()
         setupNavigationBarController()
     }
@@ -46,12 +47,16 @@ class MainTableViewController: UITableViewController {
     private func setupNavigationBarController() {
         title = SportsTypes.allCases[tabBarController?.selectedIndex ?? 0].rawValue.capitalized
         
-        let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(action))
+        let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh,
+                                            target: self,
+                                            action: #selector(tableViewReload))
         navigationItem.rightBarButtonItem = refreshButton
     }
     
-    @objc func action(sender: UIBarButtonItem) {
-        tableView.reloadData()
+    @objc private func tableViewReload(sender: UIBarButtonItem) {
+        let range = NSMakeRange(0, tableView.numberOfSections)
+        let sections = NSIndexSet(indexesIn: range)
+        tableView.reloadSections(sections as IndexSet, with: .fade)
     }
     
     // MARK: - Table view data source

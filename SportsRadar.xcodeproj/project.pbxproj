@@ -20,6 +20,7 @@
 		7B2237EE240DACE000D1B4D6 /* RoundedBlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2237ED240DACE000D1B4D6 /* RoundedBlueButton.swift */; };
 		7B2237F0240DBA4600D1B4D6 /* LabelWithAnimatedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2237EF240DBA4600D1B4D6 /* LabelWithAnimatedText.swift */; };
 		7B2237FA240F299F00D1B4D6 /* UIViewSetShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2237F9240F299F00D1B4D6 /* UIViewSetShadow.swift */; };
+		7B2237FC240F2EDC00D1B4D6 /* UIViewControllerHideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2237FB240F2EDC00D1B4D6 /* UIViewControllerHideKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		7B2237ED240DACE000D1B4D6 /* RoundedBlueButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedBlueButton.swift; sourceTree = "<group>"; };
 		7B2237EF240DBA4600D1B4D6 /* LabelWithAnimatedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithAnimatedText.swift; sourceTree = "<group>"; };
 		7B2237F9240F299F00D1B4D6 /* UIViewSetShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSetShadow.swift; sourceTree = "<group>"; };
+		7B2237FB240F2EDC00D1B4D6 /* UIViewControllerHideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerHideKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				7B2237DC240D950D00D1B4D6 /* CellRegister.swift */,
 				7B2237F9240F299F00D1B4D6 /* UIViewSetShadow.swift */,
+				7B2237FB240F2EDC00D1B4D6 /* UIViewControllerHideKeyboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				7B2237D2240D93E100D1B4D6 /* MainTableViewController.swift in Sources */,
 				7B2237F0240DBA4600D1B4D6 /* LabelWithAnimatedText.swift in Sources */,
 				7B2237C0240D892D00D1B4D6 /* SceneDelegate.swift in Sources */,
+				7B2237FC240F2EDC00D1B4D6 /* UIViewControllerHideKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
