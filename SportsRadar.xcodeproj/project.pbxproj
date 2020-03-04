@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7B2237BE240D892D00D1B4D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2237BD240D892D00D1B4D6 /* AppDelegate.swift */; };
-		7B2237C0240D892D00D1B4D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2237BF240D892D00D1B4D6 /* SceneDelegate.swift */; };
 		7B2237C5240D892D00D1B4D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B2237C3240D892D00D1B4D6 /* Main.storyboard */; };
 		7B2237C7240D892F00D1B4D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B2237C6240D892F00D1B4D6 /* Assets.xcassets */; };
 		7B2237CA240D892F00D1B4D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B2237C8240D892F00D1B4D6 /* LaunchScreen.storyboard */; };
@@ -26,7 +25,6 @@
 /* Begin PBXFileReference section */
 		7B2237BA240D892D00D1B4D6 /* SportsRadar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsRadar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2237BD240D892D00D1B4D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7B2237BF240D892D00D1B4D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7B2237C4240D892D00D1B4D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7B2237C6240D892F00D1B4D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B2237C9240D892F00D1B4D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 				7B2237E6240DA2C300D1B4D6 /* Common Elements */,
 				7B2237DB240D94B100D1B4D6 /* Extensions */,
 				7B2237BD240D892D00D1B4D6 /* AppDelegate.swift */,
-				7B2237BF240D892D00D1B4D6 /* SceneDelegate.swift */,
 				7B2237C3240D892D00D1B4D6 /* Main.storyboard */,
 				7B2237D1240D93E100D1B4D6 /* MainTableViewController.swift */,
 				7B2237D8240D941400D1B4D6 /* FieldTableViewCell.xib */,
@@ -187,7 +184,6 @@
 				7B2237DD240D950D00D1B4D6 /* CellRegister.swift in Sources */,
 				7B2237D2240D93E100D1B4D6 /* MainTableViewController.swift in Sources */,
 				7B2237F0240DBA4600D1B4D6 /* LabelWithAnimatedText.swift in Sources */,
-				7B2237C0240D892D00D1B4D6 /* SceneDelegate.swift in Sources */,
 				7B2237FC240F2EDC00D1B4D6 /* UIViewControllerHideKeyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
