@@ -13,12 +13,9 @@ extension UIView {
                    opacity: Float = 1,
                    offset: CGSize = .zero,
                    color: CGColor = UIColor.black.cgColor) {
-        
         layer.shadowRadius = radius
         layer.shadowOpacity = opacity
         layer.shadowOffset = offset
         layer.shadowColor = color
-        layer.rasterizationScale = UIScreen.main.scale
-        layer.shouldRasterize = true
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class FieldTableViewCell: UITableViewCell, UITextFieldDelegate, MatchPitchProtocol {
-    @IBOutlet weak var fieldImageView: UIView!
+    @IBOutlet weak var fieldImageView: UIImageView!
     @IBOutlet weak var homeScoreTextField: UITextField!
     @IBOutlet weak var awayScoreTextField: UITextField!
     
@@ -33,8 +33,11 @@ class FieldTableViewCell: UITableViewCell, UITextFieldDelegate, MatchPitchProtoc
         scoreLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
     }
     
-    private func setupFieldView() {
-        
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        let invalidCharacters = CharacterSet(charactersIn: "0123456789").inverted
+        return string.rangeOfCharacter(from: invalidCharacters) == nil
     }
     
     @IBAction func setScoreAction(_ sender: RoundedBlueButton) {
@@ -62,6 +65,15 @@ class FieldTableViewCell: UITableViewCell, UITextFieldDelegate, MatchPitchProtoc
     }
     
     func setContent(forSport sport: SportsTypes) {
+        fieldImageView.image = UIImage(named: sport.rawValue.capitalized)
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
         
+        fieldImageView.image = nil
+        homeScoreTextField.text = nil
+        awayScoreTextField.text = nil
+        scoreLabel.text = nil
     }
 }

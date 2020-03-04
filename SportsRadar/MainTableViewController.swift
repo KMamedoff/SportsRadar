@@ -45,6 +45,13 @@ class MainTableViewController: UITableViewController {
     
     private func setupNavigationBarController() {
         title = SportsTypes.allCases[tabBarController?.selectedIndex ?? 0].rawValue.capitalized
+        
+        let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(action))
+        navigationItem.rightBarButtonItem = refreshButton
+    }
+    
+    @objc func action(sender: UIBarButtonItem) {
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source
