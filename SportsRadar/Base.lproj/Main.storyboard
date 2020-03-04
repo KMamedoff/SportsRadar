@@ -9,7 +9,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="VcI-o5-gSu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ltd-O8-4ZX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="Byb-Ah-gls" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h8B-af-ya0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -22,13 +21,13 @@
                         <segue destination="p02-it-nSK" kind="relationship" relationship="viewControllers" id="JTc-wK-znJ"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ltd-O8-4ZX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1388" y="165"/>
         </scene>
         <!--Basketball-->
         <scene sceneID="hMI-kQ-gQQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qPX-Pb-6S6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="vvq-NH-Fae" customClass="LargeTitlesNavigationViewController" customModule="SportsRadar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Basketball" image="Basketball Tab Icon" id="gHN-ka-NLq"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8W3-Py-92w">
@@ -39,13 +38,13 @@
                         <segue destination="wkq-mI-2Iy" kind="relationship" relationship="rootViewController" id="Hf1-b1-Ims"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qPX-Pb-6S6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-581" y="521"/>
         </scene>
         <!--Football-->
         <scene sceneID="eZ4-GU-3au">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HmC-tB-cPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="ln6-jl-bhK" customClass="LargeTitlesNavigationViewController" customModule="SportsRadar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Football" image="Football Tab Icon" id="JHu-iL-rfg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ubD-oC-o0I">
@@ -56,13 +55,13 @@
                         <segue destination="wkq-mI-2Iy" kind="relationship" relationship="rootViewController" id="ThD-v8-rY7"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HmC-tB-cPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-581" y="-168"/>
         </scene>
         <!--Tennis-->
         <scene sceneID="mjv-f3-KUR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bnc-uo-oYi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="p02-it-nSK" customClass="LargeTitlesNavigationViewController" customModule="SportsRadar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Tennis" image="Tennis Tab Icon" id="2bq-6K-gGm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OhG-2o-Ggv">
@@ -73,13 +72,13 @@
                         <segue destination="wkq-mI-2Iy" kind="relationship" relationship="rootViewController" id="cub-CG-3E8"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bnc-uo-oYi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="203" y="165"/>
         </scene>
         <!--Main Table View Controller-->
         <scene sceneID="Lmo-pg-ZRC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="coV-Oc-udu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="wkq-mI-2Iy" customClass="MainTableViewController" customModule="SportsRadar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aIV-75-g49">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -93,6 +92,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="m3G-IV-d7R"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coV-Oc-udu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1238" y="165"/>
         </scene>
@@ -103,6 +103,6 @@
         <image name="Tennis Tab Icon" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ThD-v8-rY7"/>
+        <segue reference="cub-CG-3E8"/>
     </inferredMetricsTieBreakers>
 </document>

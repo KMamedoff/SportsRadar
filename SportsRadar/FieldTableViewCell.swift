@@ -43,11 +43,7 @@ class FieldTableViewCell: UITableViewCell, UITextFieldDelegate, MatchPitchProtoc
     @IBAction func setScoreAction(_ sender: RoundedBlueButton) {
         endEditing(true)
         
-        guard let homeScore = homeScoreTextField.text else {
-            return
-        }
-        
-        guard let awayScore = awayScoreTextField.text else {
+        guard let homeScore = homeScoreTextField.text, let awayScore = awayScoreTextField.text else {
             return
         }
         
