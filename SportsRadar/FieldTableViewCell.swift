@@ -9,7 +9,7 @@
 import UIKit
 
 class FieldTableViewCell: UITableViewCell, UITextFieldDelegate, MatchPitchProtocol {
-    @IBOutlet weak var fieldContainerView: UIView!
+    @IBOutlet weak var fieldImageView: UIView!
     @IBOutlet weak var homeScoreTextField: UITextField!
     @IBOutlet weak var awayScoreTextField: UITextField!
     
@@ -28,9 +28,13 @@ class FieldTableViewCell: UITableViewCell, UITextFieldDelegate, MatchPitchProtoc
         contentView.addSubview(scoreLabel)
         
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
-        scoreLabel.centerYAnchor.constraint(equalTo: fieldContainerView.centerYAnchor).isActive = true
-        scoreLabel.centerXAnchor.constraint(equalTo: fieldContainerView.centerXAnchor).isActive = true
+        scoreLabel.centerYAnchor.constraint(equalTo: fieldImageView.centerYAnchor).isActive = true
+        scoreLabel.centerXAnchor.constraint(equalTo: fieldImageView.centerXAnchor).isActive = true
         scoreLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor).isActive = true
+    }
+    
+    private func setupFieldView() {
+        
     }
     
     @IBAction func setScoreAction(_ sender: RoundedBlueButton) {
@@ -52,7 +56,7 @@ class FieldTableViewCell: UITableViewCell, UITextFieldDelegate, MatchPitchProtoc
     
     func setResult(for home: NSNumber, and away: NSNumber) {
         let new = home.stringValue + " : " + away.stringValue
-        let old = scoreLabel.text ?? ""
+        let old = scoreLabel.text ?? new
         
         scoreLabel.animateLabel(old: old, new: new)
     }

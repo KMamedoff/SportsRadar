@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+    
 class LabelWithAnimatedText: UILabel {
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -23,9 +23,11 @@ class LabelWithAnimatedText: UILabel {
     
     func commonInit(){
         self.backgroundColor = .clear
-        self.textColor = UIColor.red
+        self.textColor = UIColor.white
         self.textAlignment = .center
-        self.font = UIFont.boldSystemFont(ofSize: 50.0)
+        self.font = UIFont.boldSystemFont(ofSize: 60.0)
+        
+        self.setShadow()
     }
     
     func animateLabel(old: String, new: String) {
@@ -33,13 +35,12 @@ class LabelWithAnimatedText: UILabel {
         self.transform = .identity
         self.transform = CGAffineTransform(translationX: -self.frame.width, y: 0)
         
-        UIView.animateKeyframes(withDuration: 4, delay: 0, options: .calculationModeCubic, animations: {
-            
-            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.25) {
+        UIView.animateKeyframes(withDuration: 6, delay: 0, options: .calculationModeCubic, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.20) {
                 self.transform = CGAffineTransform(translationX: UIScreen.main.bounds.minX, y: 0)
             }
             
-            UIView.addKeyframe(withRelativeStartTime: 0.25, relativeDuration: 0.25) {
+            UIView.addKeyframe(withRelativeStartTime: 0.20, relativeDuration: 0.80) {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.8) {
                     let animation = CATransition()
                     animation.timingFunction = CAMediaTimingFunction(name:
@@ -52,7 +53,7 @@ class LabelWithAnimatedText: UILabel {
                 }
             }
 
-            UIView.addKeyframe(withRelativeStartTime: 0.75, relativeDuration: 0.25) {
+            UIView.addKeyframe(withRelativeStartTime: 0.80, relativeDuration: 0.20) {
                 self.transform = CGAffineTransform(translationX: self.frame.width, y: 0)
             }
         })
